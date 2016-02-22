@@ -8,6 +8,7 @@
     "bootstrap-sass": "^3.3.6",
     <% } %>
     "autoprefixer": "^6.3.3",
+    "browserify-shim": "^3.8.12",
     "postcss-cli": "^2.5.1",
     "node-sass": "^3.4.2",
     "eslint": "^2.2.0",
@@ -24,7 +25,7 @@
   "scripts": {
     "html": "mkdir -p dist && cp app/*.html dist/",
 
-    "scss": "node-sass --output-style compressed -o dist/css app/styles",
+    "scss": "sass --style compressed app/styles:dist/css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
 
     "lint": "eslint app/scripts",
@@ -37,9 +38,16 @@
     "build:images": "npm run imagemin",
     "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
 
-    "watch:scss": "npm run scss && node-sass --output-style compressed -o dist/css -wr app/styles",
+    "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "mkdir -p dist/js && watchify app/scripts/index.js -o dist/js/bundle.js",
     "server": "live-server --open='dist'",
     "watch": "npm run html && parallelshell 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
+  },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jQuery": "$",
+    "underscore": "_"
   }
 }

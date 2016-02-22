@@ -2,28 +2,34 @@
 
 This is a [Yeoman](http://yeoman.io/) generator made specifically for students at The Iron Yard and is used as an introduction to Yeoman & npm. It includes a specific set of tools that we use throughout our course and purposefully omits certain ones until we need them.
 
+### What is Included
+* Sass
+* jQuery
+* Underscore
+
 ### What is Optional
 
-* Sass
-* Underscore
+* Backbone
+* React
 
 ### Installation & Usage
 
 To install:
 
 ```sh
-npm install -g generator-tiy-gvl-feb-2016
+npm install -g tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016
 ```
 
 To update:
 
 ```sh
-npm update -g generator-tiy-gvl-feb-2016
+npm update -g tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016
 ```
 
 This is used like any other Yeoman generator. Simply navigate to your new project folder and run:
 
 ```sh
+# Important: *run this inside the project directory*
 yo tiy-gvl-feb-2016
 ```
 

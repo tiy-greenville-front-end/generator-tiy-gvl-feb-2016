@@ -1,6 +1,5 @@
 - backbone
-- jquery
-- underscore
+- underscore & lodash
 - react
 - fonts `app/fonts/**/*`
 - 'app/*.*', '!app/*.html'], {dot: true}
