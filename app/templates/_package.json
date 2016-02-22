@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    <% if(includeBootstrap) { %>
+    "bootstrap-sass": "^3.3.6",
+    <% } %>
+    "autoprefixer": "^6.3.3",
+    "postcss-cli": "^2.5.1",
+    "node-sass": "^3.4.2",
+    "eslint": "^2.2.0",
+    "uglify-js": "^2.6.1",
+    "parallelshell": "^2.0.0",
+    "imagemin-cli": "^2.1.0",
+    "browserify": "^12.0.0",
+    "eslint-plugin-react": "^4.0.0",
+    "watchify": "^3.7.0",
+    "live-server": "^0.9.2",
+    "jquery": "^2.2.0",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "html": "mkdir -p dist && cp app/*.html dist/",
+
+    "scss": "node-sass --output-style compressed -o dist/css app/styles",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+
+    "lint": "eslint app/scripts",
+    "browserify": "mkdir -p dist/js && browserify app/scripts/index.js | uglifyjs -c > dist/js/bundle.js",
+
+    "imagemin": "mkdir -p dist/images && imagemin app/images dist/images -p",
+
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:js": "npm run lint && npm run browserify",
+    "build:images": "npm run imagemin",
+    "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
+
+    "watch:scss": "npm run scss && node-sass --output-style compressed -o dist/css -wr app/styles",
+    "watch:js": "mkdir -p dist/js && watchify app/scripts/index.js -o dist/js/bundle.js",
+    "server": "live-server --open='dist'",
+    "watch": "npm run html && parallelshell 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
+  }
+}
