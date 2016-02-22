@@ -43,7 +43,7 @@
 
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
-    "watch:html": "onchange 'app/**/*.html' -- npm run html",
+    "watch:html": "npm run html && onchange 'app/**/*.html' -- npm run html",
     "server": "live-server --open='dist'",
     "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
   },
