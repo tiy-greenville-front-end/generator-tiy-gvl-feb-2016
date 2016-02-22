@@ -19,6 +19,7 @@
     "eslint-plugin-react": "^4.0.0",
     "watchify": "^3.7.0",
     "live-server": "^0.9.2",
+    "onchange": "^2.0.0",
     "jquery": "^2.2.0",
     "underscore": "^1.8.3"
   },
@@ -40,8 +41,9 @@
 
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "mkdir -p dist/js && watchify app/scripts/index.js -o dist/js/bundle.js",
+    "watch:html": "onchange 'app/**/*.html' -- npm run html",
     "server": "live-server --open='dist'",
-    "watch": "npm run html && parallelshell 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
+    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
   },
   "browserify": {
     "transform": [ "browserify-shim" ]

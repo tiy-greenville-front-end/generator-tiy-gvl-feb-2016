@@ -1,9 +1,9 @@
 <% if(includeBootstrap) { %>
-/* Bootstrap Variables */
-$icon-font-path: "../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
-/* Import Bootstrap */
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 <% } %>
 
 *,
