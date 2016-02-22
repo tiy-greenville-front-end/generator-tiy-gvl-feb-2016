@@ -33,10 +33,11 @@
     "browserify": "browserify app/scripts/index.js | uglifyjs -c > dist/js/bundle.js",
 
     "imagemin": "imagemin app/images dist/images -p",
+    "favicon": "cp app/favicon.ico dist/",
 
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run browserify",
-    "build:images": "npm run imagemin",
+    "build:images": "npm run imagemin && npm run favicon",
     "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
 
     "watch:scss": "sass --watch app/styles:dist/css",

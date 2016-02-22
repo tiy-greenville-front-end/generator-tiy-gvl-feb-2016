@@ -76,6 +76,13 @@ AppGenerator.prototype.writeIndex = function () {
   this.indexFile = engine(this.indexFile, this);
 };
 
+AppGenerator.prototype.copyIcons = function () {
+  this.fs.copy(
+    this.templatePath('favicon.ico'),
+    this.destinationPath('app/favicon.ico')
+  );
+}
+
 AppGenerator.prototype.install = function() {
   this.npmInstall([], {'loglevel': 'error'});
 };

@@ -9,6 +9,7 @@ This is a [Yeoman](http://yeoman.io/) generator made specifically for students a
 
 ### What is Optional
 
+* Bootstrap
 * Backbone
 * React
 

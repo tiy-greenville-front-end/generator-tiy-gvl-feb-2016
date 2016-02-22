@@ -1,9 +1,10 @@
+- globals? $, _, Backbone, React
 - backbone
 - react
 - fonts `app/fonts/**/*`
 - 'app/*.*', '!app/*.html'], {dot: true}
 - babel
 - sourcemaps
-- favicon
 - deploy
-- testing
+- testing (mocha + chai?)
+- test the generator itself with yeoman-assert
