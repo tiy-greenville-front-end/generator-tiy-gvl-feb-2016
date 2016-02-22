@@ -26,7 +26,7 @@
   "scripts": {
     "html": "cp app/*.html dist/",
 
-    "scss": "sass --style compressed app/styles/app.scss dist/css/app.css",
+    "scss": "sass --style compressed --update app/styles:dist/css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
 
     "lint": "eslint app/scripts",
