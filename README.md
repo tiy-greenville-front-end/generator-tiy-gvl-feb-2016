@@ -1,19 +1,10 @@
 ### Yeoman TIY Generator
 
-This is a simple [Yeoman](http://yeoman.io/) generator based off the [Gulp Generator](https://github.com/yeoman/generator-gulp-webapp). It has been made specifically for students at The Iron Yard and is used as an introduction to Yeoman & Gulp. It includes a specific set of tools that we use throughout our course and purposefully omits certain ones until we need them.
-
-### What it Includes
-
-* Gulp 
-* HTML Template 
-* jQuery
-* Normalize
-* Mocha/Chai
+This is a [Yeoman](http://yeoman.io/) generator made specifically for students at The Iron Yard and is used as an introduction to Yeoman & npm. It includes a specific set of tools that we use throughout our course and purposefully omits certain ones until we need them.
 
 ### What is Optional
 
 * Sass
-* Bourbon & Neat
 * Underscore
 
 ### Installation & Usage
@@ -21,37 +12,23 @@ This is a simple [Yeoman](http://yeoman.io/) generator based off the [Gulp Gener
 To install:
 
 ```sh
-npm install -g generator-tiy-webapp
+npm install -g generator-tiy-gvl-feb-2016
 ```
 
 To update:
 
 ```sh
-npm update -g generator-tiy-webapp
-```
-
-Check Current Version - [Current Version](https://github.com/twhitacre/generator-tiy-webapp/releases)
-
-```sh
-npm list -g  generator-tiy-webapp
+npm update -g generator-tiy-gvl-feb-2016
 ```
 
 This is used like any other Yeoman generator. Simply navigate to your new project folder and run:
 
 ```sh
-yo tiy-webapp
+yo tiy-gvl-feb-2016
 ```
 
-## Gulp Tasks
+## npm Tasks
 
-There are a few specific tasks so feel free to check out the `gulpfile.js` but the four most used ones will be.
+There are a few specific tasks so feel free to check out the `package.json` but the most used one will be.
 
-* `gulp` - This will run the default and build your `dist` folder
-* `gulp watch` - Starts a server and watches for changes, also livereload
-* `gulp test-server` - Starts a server instance to view your Mocha tests in the browser
-
-## Deploying Your App
-
-By default the `/dist` folder is now ignored by git, so if you want to push this to Github Pages, you will need to remove that from the `.gitignore` file. Once you do that, the command below will work properly.
-
-* `gulp deploy` - Deploys your `dist` folder to a `gh-pages` branch as a subtree push
+* `npm run watch` - Starts a server and watches for changes, also livereload
