@@ -1,5 +1,4 @@
 - backbone
-- underscore & lodash
 - react
 - fonts `app/fonts/**/*`
 - 'app/*.*', '!app/*.html'], {dot: true}
@@ -7,3 +6,4 @@
 - sourcemaps
 - favicon
 - deploy
+- testing

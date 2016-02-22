@@ -1,14 +1,23 @@
 {
-  "private": true,
   "name": "generator-tiy-gvl-feb-2016",
   "version": "0.0.1",
   "description": "",
-  "main": "generators/app/index.js",
+  "license": "MIT",
+  "repository": "tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016",
+  "authors": [
+    "Jacob Smith <jacob@jacobsmith.io>"
+  ],
+  "main": "app/index.js",
+  "engines": {
+    "node": ">=5.0",
+    "npm": ">=3.0"
+  },
   "files": [
-    "generators/app"
+    "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "theironyard"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
@@ -17,8 +26,5 @@
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.22.5",
     "yosay": "^1.1.0"
-  },
-  "peerDependencies": {
-    "yo": "^1.6.0"
   }
 }
