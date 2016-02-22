@@ -85,5 +85,13 @@ AppGenerator.prototype.app = function () {
   mkdirp('app/scripts');
   mkdirp('app/styles');
   mkdirp('app/images');
+  mkdirp('app/fonts');
+
+  mkdirp('dist');
+  mkdirp('dist/js');
+  mkdirp('dist/css');
+  mkdirp('dist/images');
+  mkdirp('dist/fonts');
+
   this.write('app/index.html', this.indexFile);
 };

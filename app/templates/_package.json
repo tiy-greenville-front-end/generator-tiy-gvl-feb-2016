@@ -24,15 +24,15 @@
     "underscore": "^1.8.3"
   },
   "scripts": {
-    "html": "mkdir -p dist && cp app/*.html dist/",
+    "html": "cp app/*.html dist/",
 
-    "scss": "sass --style compressed app/styles:dist/css",
-    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "scss": "sass --style compressed app/styles/app.scss dist/css/app.css",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
 
     "lint": "eslint app/scripts",
-    "browserify": "mkdir -p dist/js && browserify app/scripts/index.js | uglifyjs -c > dist/js/bundle.js",
+    "browserify": "browserify app/scripts/index.js | uglifyjs -c > dist/js/bundle.js",
 
-    "imagemin": "mkdir -p dist/images && imagemin app/images dist/images -p",
+    "imagemin": "imagemin app/images dist/images -p",
 
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run browserify",
@@ -40,7 +40,7 @@
     "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
 
     "watch:scss": "sass --watch app/styles:dist/css",
-    "watch:js": "mkdir -p dist/js && watchify app/scripts/index.js -o dist/js/bundle.js",
+    "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
     "watch:html": "onchange 'app/**/*.html' -- npm run html",
     "server": "live-server --open='dist'",
     "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
