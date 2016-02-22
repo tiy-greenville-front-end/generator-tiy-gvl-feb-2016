@@ -17,13 +17,13 @@ This is a [Yeoman](http://yeoman.io/) generator made specifically for students a
 To install:
 
 ```sh
-npm install -g tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016
+npm install -g generator-tiy-gvl-feb-2016
 ```
 
 To update:
 
 ```sh
-npm update -g tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016
+npm update -g generator-tiy-gvl-feb-2016
 ```
 
 This is used like any other Yeoman generator. Simply navigate to your new project folder and run:
