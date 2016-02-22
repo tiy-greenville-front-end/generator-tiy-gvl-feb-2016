@@ -77,7 +77,7 @@ AppGenerator.prototype.writeIndex = function () {
 };
 
 AppGenerator.prototype.install = function() {
-  this.npmInstall();
+  this.npmInstall([], {'loglevel': 'error'});
 };
 
 AppGenerator.prototype.app = function () {
