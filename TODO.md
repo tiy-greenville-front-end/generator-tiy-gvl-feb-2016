@@ -5,6 +5,5 @@
 - 'app/*.*', '!app/*.html'], {dot: true}
 - babel
 - sourcemaps
-- deploy
 - testing (mocha + chai?)
 - test the generator itself with yeoman-assert
