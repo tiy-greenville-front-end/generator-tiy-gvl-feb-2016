@@ -1,8 +1,8 @@
-- globals? $, _, Backbone, React
+- handlebars
 - backbone
 - react
 - fonts `app/fonts/**/*`
-- 'app/*.*', '!app/*.html'], {dot: true}
+- 'app/*', 'app/.*' '!app/*.html'
 - babel
 - sourcemaps
 - testing (mocha + chai?)

@@ -42,7 +42,7 @@
     "build:images": "npm run imagemin && npm run favicon",
     "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
 
-    "deploy": "npm run build && git-directory-deploy",
+    "deploy": "npm run build && git-directory-deploy --directory dist/",
 
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
