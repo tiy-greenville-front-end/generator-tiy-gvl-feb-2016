@@ -11,6 +11,8 @@ var htmlWiring = require('html-wiring');
 var mkdirp = require('mkdirp');
 
 var AppGenerator = module.exports = function Appgenerator(args, options, config) {
+  console.log('Dietz generator');
+  
   yeoman.Base.apply(this, arguments);
   this.options = options;
   this.pkg = JSON.parse(htmlWiring.readFileAsString(path.join(__dirname, '../package.json')));
@@ -29,6 +31,14 @@ AppGenerator.prototype.askFor = function askFor() {
       name: 'Bootstrap',
       value: 'includeBootstrap',
       checked: true
+    },{
+      name: 'Handlebars',
+      value: 'includeHandlebars',
+      checked: true
+    },{
+      name: 'Backbone',
+      value: 'includeBackbone',
+      checked: true
     }]
   }];
 
@@ -42,6 +52,8 @@ AppGenerator.prototype.askFor = function askFor() {
     // manually deal with the response, get back and store the results.
     // we change a bit this way of doing to automatically do this in the self.prompt() method.
     this.includeBootstrap = hasFeature('includeBootstrap');
+    this.includeHandlebars = hasFeature('includeHandlebars');
+    this.includeBackbone = hasFeature('includeBackbone');
 
     cb();
   }.bind(this));

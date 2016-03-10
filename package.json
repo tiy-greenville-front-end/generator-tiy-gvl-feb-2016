@@ -5,7 +5,8 @@
   "license": "MIT",
   "repository": "tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016",
   "authors": [
-    "Jacob Smith <jacob@jacobsmith.io>"
+    "Jacob Smith <jacob@jacobsmith.io>",
+    "Dan Dietz <dan@boltaffect.com>"
   ],
   "main": "app/index.js",
   "engines": {
