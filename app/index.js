@@ -36,9 +36,17 @@ AppGenerator.prototype.askFor = function askFor() {
       value: 'includeHandlebars',
       checked: true
     },{
-      name: 'Backbone',
-      value: 'includeBackbone',
-      checked: true
+      name: 'React',
+      value: 'includeReact',
+      checked: false
+    },{
+      name: 'React Bootstrap Components',
+      value: 'includeReactBootstrap',
+      checked: false
+    },{
+      name: 'Backbone React Components',
+      value: 'includeReactBackbone',
+      checked: false
     }]
   }];
 
@@ -47,13 +55,17 @@ AppGenerator.prototype.askFor = function askFor() {
 
     var hasFeature = function (feat) {
       return features.indexOf(feat) !== -1;
-    }
+    };
 
     // manually deal with the response, get back and store the results.
     // we change a bit this way of doing to automatically do this in the self.prompt() method.
     this.includeBootstrap = hasFeature('includeBootstrap');
     this.includeHandlebars = hasFeature('includeHandlebars');
     this.includeBackbone = hasFeature('includeBackbone');
+
+    this.includeReact = hasFeature('includeReact');
+    this.includeReactBootstrap = hasFeature('includeReactBootstrap');
+    this.includeReactBackbone = hasFeature('includeReactBackbone');
 
     cb();
   }.bind(this));
