@@ -1,6 +1,3 @@
-- handlebars
-- backbone
-- react
 - fonts `app/fonts/**/*`
 - 'app/*', 'app/.*' '!app/*.html'
 - babel

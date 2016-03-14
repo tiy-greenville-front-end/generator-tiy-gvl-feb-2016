@@ -18,20 +18,20 @@ This is a [Yeoman](http://yeoman.io/) generator made specifically for students a
 To install:
 
 ```sh
-npm install -g generator-tiy-gvl-feb-2016
+npm install -g generator-tiy-gvl
 ```
 
 To update:
 
 ```sh
-npm update -g generator-tiy-gvl-feb-2016
+npm update -g generator-tiy-gvl
 ```
 
 This is used like any other Yeoman generator. Simply navigate to your new project folder and run:
 
 ```sh
 # Important: *run this inside the project directory*
-yo tiy-gvl-feb-2016
+yo tiy-gvl
 ```
 
 ## npm Tasks
