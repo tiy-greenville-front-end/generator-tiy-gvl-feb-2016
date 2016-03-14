@@ -36,6 +36,10 @@ AppGenerator.prototype.askFor = function askFor() {
       value: 'includeHandlebars',
       checked: true
     },{
+      name: 'Backbone',
+      value: 'includeBackbone',
+      checked: false
+    },{
       name: 'React',
       value: 'includeReact',
       checked: false
@@ -105,7 +109,7 @@ AppGenerator.prototype.copyIcons = function () {
     this.templatePath('favicon.ico'),
     this.destinationPath('app/favicon.ico')
   );
-}
+};
 
 AppGenerator.prototype.install = function() {
   this.npmInstall([], {'loglevel': 'error'});
