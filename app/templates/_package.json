@@ -54,8 +54,9 @@
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
     "watch:html": "npm run html && onchange 'app/**/*.html' -- npm run html",
     "watch:images": "npm run build:images && onchange 'app/images/*' -- npm run build:images",
+    "watch:fonts": "cp -r app/fonts/* dist/fonts/",
     "server": "live-server --open='dist'",
-    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:images' 'npm run watch:js' 'npm run server'"
+    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:images' 'npm run watch:fonts' 'npm run watch:js' 'npm run server'"
   },
   "browserify": {
     "transform": [
