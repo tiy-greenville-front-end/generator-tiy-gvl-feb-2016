@@ -33,7 +33,7 @@
   },
   "scripts": {
     "html": "cp app/*.html dist/",
-
+    "fonts": "cp -r app/fonts/* dist/fonts/",
     "scss": "sass --style compressed --update app/styles:dist/css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
 
@@ -46,15 +46,15 @@
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run browserify",
     "build:images": "npm run imagemin && npm run favicon",
-    "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
+    "build": "npm run html && npm run fonts && npm run build:css && npm run build:js && npm run build:images",
 
     "deploy": "npm run build && git-directory-deploy --directory dist/",
 
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
-    "watch:html": "npm run html && onchange 'app/**/*.html' -- npm run html",
-    "watch:images": "npm run build:images && onchange 'app/images/*' -- npm run build:images",
-    "watch:fonts": "cp -r app/fonts/* dist/fonts/",
+    "watch:html": "onchange 'app/**/*.html' -- npm run html",
+    "watch:images": "onchange 'app/images/*' -- npm run build:images",
+    "watch:fonts": "onchange 'app/fonts/*' -- npm run fonts",
     "server": "live-server --open='dist'",
     "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:images' 'npm run watch:fonts' 'npm run watch:js' 'npm run server'"
   },
