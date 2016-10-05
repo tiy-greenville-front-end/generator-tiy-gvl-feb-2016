@@ -33,7 +33,7 @@
   },
   "scripts": {
     "html": "cp app/*.html dist/",
-    "fonts": "cp -r app/fonts/* dist/fonts/",
+    "fonts": "cp -r app/fonts/ dist/fonts/",
     "scss": "sass --style compressed --update app/styles:dist/css",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
 
