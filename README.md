@@ -36,6 +36,9 @@ yo tiy-gvl
 
 ## npm Tasks
 
-There are a few specific tasks so feel free to check out the `package.json` but the most used one will be.
+There are a few specific tasks so feel free to review the `package.json` but the most used ones will be:
 
-* `npm run watch` - Starts a server and watches for changes, also livereload
+* `npm run watch` — Starts a server and watches for changes, also livereload
+	
+* `npm run deploy` — Builds the project, creates a gh-pages branch (if one doesn't exist), and populates it with the contents of your `dist/` dir.  
+	**Note:** Uses a second worktree to do the git magic. See [git-worktree](https://git-scm.com/docs/git-worktree)
