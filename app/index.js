@@ -11,8 +11,6 @@ var htmlWiring = require('html-wiring');
 var mkdirp = require('mkdirp');
 
 var AppGenerator = module.exports = function Appgenerator(args, options, config) {
-  console.log('Dietz generator');
-  
   yeoman.Base.apply(this, arguments);
   this.options = options;
   this.pkg = JSON.parse(htmlWiring.readFileAsString(path.join(__dirname, '../package.json')));
@@ -129,4 +127,5 @@ AppGenerator.prototype.app = function () {
   mkdirp('dist/fonts');
 
   this.write('app/index.html', this.indexFile);
+  this.write('dist/index.html', this.indexFile);
 };

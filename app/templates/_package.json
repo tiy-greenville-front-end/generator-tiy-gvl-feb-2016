@@ -6,6 +6,9 @@
   "devDependencies": {
     "git-directory-deploy": "^1.4.0",
     "autoprefixer": "^6.3.3",
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
     "browserify-shim": "^3.8.12",
     "postcss-cli": "^2.5.1",
     "node-sass": "^3.4.2",
@@ -60,6 +63,14 @@
   },
   "browserify": {
     "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ],
       "browserify-shim",
       <% if(includeHandlebars) { %>"hbsfy",<% } %>
       <% if(includeReact) { %>"reactify",<% } %>
