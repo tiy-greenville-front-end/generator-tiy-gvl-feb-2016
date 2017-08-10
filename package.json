@@ -1,6 +1,6 @@
 {
   "name": "generator-tiy-gvl",
-  "version": "0.0.14",
+  "version": "1.0.0",
   "description": "A Yeoman generator for TIY FEE students",
   "license": "MIT",
   "repository": "tiy-greenville-frontend-2016-feb/generator-tiy-gvl-feb-2016",
